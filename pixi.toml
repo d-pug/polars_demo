@@ -1,0 +1,21 @@
+[project]
+authors = ["Nick Ulle <naulle@ucdavis.edu>"]
+channels = ["conda-forge"]
+name = "polars_demo"
+platforms = ["linux-64", "osx-64", "win-64"]
+version = "0.1.0"
+
+[tasks]
+build = { cmd = "jupyter-book build .", description = "Build the reader." }
+publish = { cmd = "ghp-import --no-jekyll --no-history --push _build/html", description = "Publish the reader to the `gh-pages` branch on GitHub." }
+clean = { cmd = "rm -rf _build/", description = "Remove the build directory." }
+rebuild = { depends-on = ["clean", "build"], description = "Remove the build directory and build the reader." }
+
+[dependencies]
+jupyter-book = ">=1.0.4.post1,<2"
+ghp-import = ">=2.1.0,<3"
+python = ">=3.13.2,<3.14"
+jupyter = ">=1.1.1,<2"
+polars = ">=1.24.0,<2"
+fastexcel = ">=0.13.0,<0.14"
+pandas = ">=2.2.3,<3"
