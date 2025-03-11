@@ -5,13 +5,13 @@
 * Very fast. Most notably around reading data, but also operations. Compare
   reading a large CSV with Polars versus Pandas.
 
-* No quirks (as of yet). Nothing like Pandas' SettingWithCopyWarning. Columns
-  are columns (no special "indexes"). No `.loc` vs `.iloc` vs `[ ]`.
-
 * Early errors, strictness, and type safety.
 
 * Easy to select columns in many different ways. Want all the numeric columns?
   It's easy. Want all of the columns that end with `_name`? Also easy.
+
+* No quirks (as of yet). Nothing like Pandas' SettingWithCopyWarning. Columns
+  are columns (no special "indexes"). No `.loc` vs `.iloc` vs `[ ]`.
 
 * Compatible with Python's `datetime` module.
 
