@@ -1,4 +1,5 @@
 _build/*
+.ipynb_checkpoints
 
 # pixi environments
 .pixi
